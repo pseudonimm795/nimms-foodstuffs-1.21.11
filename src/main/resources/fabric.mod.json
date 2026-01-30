@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "nimms-foodstuffs",
+	"version": "${version}",
+	"name": "Nimms FoodStuffs",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/nimms-foodstuffs/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"pseudonimm795.foodstuffsmod.NimmsFoodStuffs"
+		],
+		"client": [
+			"pseudonimm795.foodstuffsmod.NimmsFoodStuffsClient"
+		],
+		"fabric-datagen": [
+			"pseudonimm795.foodstuffsmod.NimmsFoodStuffsDataGenerator"
+		]
+	},
+	"mixins": [
+		"nimms-foodstuffs.mixins.json",
+		{
+			"config": "nimms-foodstuffs.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
